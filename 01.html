@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>  /* style태그는 css를 정의하는 태그 
+          css를 정의하는 방법 선택자(중요) 지정 후 스타일 설정*/
+    body{  /* 선택자 : 태그 이름으로 선택하겠다 */
+        background-color: yellow;
+        margin: 0px 0px 0px 0px;
+    }
+
+    #title{ /*id로 선택하겠다. 이름은 title */
+        background-color: red;
+       /* display: inline-block; /* inline : 가로세로 지정 불가
+                            block : 가로세로 지정 가능 줄바꿈
+                            inline-block : 가로세로지정가능 줄바꿈없음*/
+        float: left;
+        width : 1024px;
+        height: 100px;
+    }
+    #title_01{
+        display: inline-block;
+        width:300px;
+    }
+    #title_02{
+        display: inline-block;
+        width:700px;
+    }
+    #title_02 span{  /* 선택자 해석 : 아이디가 title_02 인 자식 중 span태그*/
+        background-color: white;
+    }
+    #nav{
+        background-color: gray;
+        float: left;
+        width:1024px;
+        height: 50px;;
+    }
+    #section{
+        background-color: blue;
+        float: left;
+        width:1024px;
+        height:200px;
+    }
+    .se01{ /*선택자 해석 : 클래스 이름을 선택하겠다 */
+        background-color: aqua;
+        float: left;
+        width:512px;
+        height:200px;
+    }
+ /*   #se02{
+        background-color: rgb(197, 209, 22);
+        float: left;
+        width:512px;
+        height:200px;
+    }*/
+    #footer{
+        background-color: cadetblue;
+        float: left;
+        width:1024px;
+        height: 30px;
+    }
+    h1{
+        padding-left: 100px;
+        padding-top: 5px;
+    }
+    ul li{
+        display: inline;
+    }
+    ul li span{
+        background-color: white;
+        margin-left: 20px;
+    }
+    ul li span:hover{
+        background-color: red;
+    }
+
+</style>
+<body>
+    <div id="title"> <!-- id 라는 속성에 값으로   title 지정
+                      모든 태그는 아이디를지정할 수 있다. 단 유니크-->
+        <div id="title_01">
+            <h1>kim tr</h1>
+        </div>
+        <div id="title_02">
+            <span>검색어</span>
+            <input type="text" size="30">
+            <input type="button" value="검색">
+        </div>
+    </div>
+    <div id="nav">
+        <ul>
+            <li><span>홈으로</span></li>
+            <li><span>우리는</span></li>
+            <li><span>프로그래머랩</span></li>
+        </ul>
+    </div>
+    <div id="section">
+        <div class="se01">
+
+        </div>
+        <div class="se01">  <!-- 태그에 클래스로 이름 설정 가능
+                               클래스는 중복된 이름을 사용할 수 있다-->
+
+        </div>
+
+    </div>
+    <div id="footer"> 개발자 : 김은수</div>
+</body>
+</html>
